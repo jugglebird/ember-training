@@ -3,7 +3,7 @@
     <div class="control-group">
       <label class="control-label" for="summary">Status</label>
       <div class="controls">
-        {{view "select" content=statuses}}
+        {{view Ember.Select content=statuses value=model.status}}
       </div>
     </div>
 
@@ -29,8 +29,8 @@
     </div>
 
     <div class="control-group form-actions">
-      {{input type="submit" value="Save" click="saveChanges" class="sui-bttn-primary sui-bttn" data-button-type="submit" data-primary="true"}}
-      <a class="sui-bttn" data-button-type="cancel" data-dismiss="modal" href="#">Cancel</a>
+      <button class="sui-bttn sui-bttn-primary" {{action "saveChanges"}}>Save</button>
+      <button class="sui-bttn" {{action "cancel"}}>Cancel</button>
     </div>
   </form>
 </article>

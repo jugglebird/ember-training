@@ -1,7 +1,8 @@
 import Ember from 'ember';
+import Ticket from 'helpdesk/models/ticket';
 
 export default Ember.Controller.extend({
-  statuses: ["open", "closed"],
+  statuses: Ticket.STATUSES,
 
   actions: {
     saveChanges: function() {

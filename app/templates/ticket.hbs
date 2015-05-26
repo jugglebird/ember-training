@@ -1,8 +1,11 @@
 {{outlet}}
 
-{{#unless isEditing }}
+{{#unless isEditing}}
   <article class="ticket">
-    <h3>{{model.summary}}</h3>
+    <h3>
+      {{model.summary}}
+      <small>- {{link-to 'edit' 'ticket.edit' classNames='edit'}}</small>
+    </h3>
     <p><strong>Created by</strong>&nbsp;{{model.creator}}</p>
     <hr />
     <p>{{model.description}}</p>
