@@ -1,0 +1,29 @@
+article.tickets {
+  margin: 0px 35px 0 0;
+  width: 25%;
+  background: #cecece;
+  float: left;
+  padding: 15px 20px 20px; 
+}
+
+article.tickets h2 {
+  font-size: 20px;
+  padding-left: 6px;
+  padding-bottom: 14px;
+}
+
+article.tickets ul li {
+  border-bottom: 1px solid #dddddd;
+  padding: 8px 6px 10px;
+  cursor: pointer;
+}
+
+article.tickets ul li:hover, article.tickets ul li.active {
+  background: #ffffff;
+}
+
+article.ticket {
+  margin: 10px;
+  width: 60%;
+  float: left;
+}

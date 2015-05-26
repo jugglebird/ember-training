@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<header class="site-navigation sui-opt-in">
+  <nav class="global-nav" data-navbar="global">
+    <div class="nav-fluid-container">
+      {{link-to 'Spiceworks Helpdesk' 'application' class='global-nav_brand'}}
+    </div>
+  </nav>
+  <nav class="domestic-nav" data-sticky="true" data-navbar="domestic">
+    <div class="nav-fluid-container">
+      <span class="domestic-nav_title">Helpdesk</span>
+    </div>
+  </nav>
+</header>
 
-{{outlet}}
+<div class="sui-fluid-container">
+  {{outlet}}
+</div>

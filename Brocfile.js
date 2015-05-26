@@ -17,4 +17,8 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import( app.bowerDirectory + '/underscore/underscore.js' );
+app.import( app.bowerDirectory + '/modernizr/modernizr.js' );
+app.import( app.bowerDirectory + '/moment/moment.js' );
+
 module.exports = app.toTree();

@@ -1,0 +1,12 @@
+<article class="tickets">
+  <h2>Tickets</h2>
+  <ul>
+    {{#each ticket in model}}
+      {{#link-to 'ticket' ticket tagName="li"}}
+        {{ticket.summary}}
+      {{/link-to}}
+    {{/each}}
+  </ul>
+</article>
+
+{{outlet}}
