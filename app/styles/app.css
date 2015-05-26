@@ -27,3 +27,8 @@ article.ticket {
   width: 60%;
   float: left;
 }
+
+header.ticket-header {
+  float: right;
+  margin: 10px;
+}

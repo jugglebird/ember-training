@@ -1,8 +1,4 @@
 <article class="tickets">
-  <h2>Tickets</h2>
-  {{#link-to "tickets.new"}}
-    New Ticket
-  {{/link-to}}
   <ul>
     {{#each ticket in model}}
       {{#link-to 'ticket' ticket tagName="li"}}
@@ -11,5 +7,11 @@
     {{/each}}
   </ul>
 </article>
+
+<header class="ticket-header">
+  {{#link-to "tickets.new" class="sui-bttn sui-bttn-primary new-ticket"}}
+    New Ticket
+  {{/link-to}}
+</header>  
 
 {{outlet}}
