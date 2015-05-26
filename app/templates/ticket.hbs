@@ -8,6 +8,11 @@
         {{link-to 'Edit' 'ticket.edit' classNames='edit sui-bttn'}}
       </div>
       <span class="ticket-id">{{prettyId}}</span>
+      <div class="byline-area">
+        <p class="meta byline">
+          created on {{model.created_at}} 
+        </p>
+      </div>
       <h3>
         {{model.summary}}
       </h3>

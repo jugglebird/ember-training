@@ -67,8 +67,8 @@ article.ticket .ticket-header .actions {
 
 article.ticket .ticket-header .ticket-id {
   display: inline-block;
-  position: relative;
-  left: -24px;
+  position: absolute;
+  left: 16px;
   width: 94px;
   height: 21px;
   line-height: 21px;
@@ -91,15 +91,25 @@ article.ticket .ticket-header .ticket-id span {
 article.ticket .ticket-header .ticket-id:after {
   content: '';
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: 3px;
-  right: -41px;
+  right: -7px;
   width: 15px;
   height: 15px;
   box-shadow: 6px 0 3px -3px rgba(0, 0, 0, 0.15);
   background-color: inherit;
   background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
   transform: rotate(45deg);
+}
+
+article.ticket .ticket-header .byline-area {
+  margin-left: 90px;
+}
+
+article.ticket .ticket-header .byline-area .byline {
+  font-size: 11px;
+  color: gray;
+  line-height: 22px;
 }
 
 article.ticket .ticket-details {
