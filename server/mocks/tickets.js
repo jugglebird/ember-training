@@ -139,13 +139,15 @@ module.exports = function(app) {
   });
 
   ticketsRouter.post('/', function(req, res) {
-    res.status(201).end();
+    res.status(201).send({
+      'tickets': req.params.ticket
+    });
   });
 
   ticketsRouter.get('/:id', function(req, res) {
     res.send({
       'tickets': _.find(ticketData, function(ticket) {
-        return ticket.id == req.params.id;
+        return ticket.id === req.params.id;
       })
     });
   });

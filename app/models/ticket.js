@@ -8,7 +8,11 @@ var Ticket = DS.Model.extend({
 });
 
 Ticket.reopenClass({
-  STATUSES: ["open", "closed"]
+  STATUSES: ["open", "closed"],
+
+  valid: function(fields) {
+    return fields.summary && fields.creator;
+  }
 });
 
 export default Ticket;

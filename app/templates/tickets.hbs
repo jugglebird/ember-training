@@ -1,5 +1,8 @@
 <article class="tickets">
   <h2>Tickets</h2>
+  {{#link-to "tickets.new"}}
+    New Ticket
+  {{/link-to}}
   <ul>
     {{#each ticket in model}}
       {{#link-to 'ticket' ticket tagName="li"}}

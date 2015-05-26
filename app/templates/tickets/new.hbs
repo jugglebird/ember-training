@@ -1,0 +1,41 @@
+<article class="ticket">
+  {{#if showError}}
+    <div class="message-panel message-panel-error">
+      Ticket requires a summary and description!
+    </div>
+  {{/if}}
+  <form class="form-vertical">
+    <div class="control-group">
+      <label class="control-label" for="summary">Status</label>
+      <div class="controls">
+        {{view Ember.Select content=statuses value=fields.status}}
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="summary">Summary</label>
+      <div class="controls">
+        {{input value=fields.summary}}
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="summary">Creator</label>
+      <div class="controls">
+        {{input value=fields.creator}}
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="summary">Description</label>
+      <div class="controls">
+        {{textarea value=fields.description}}
+      </div>
+    </div>
+
+    <div class="control-group form-actions">
+      <button class="sui-bttn sui-bttn-primary" {{action "createTicket"}}>Save</button>
+      <button class="sui-bttn" {{action "cancel"}}>Cancel</button>
+    </div>
+  </form>
+</article>
