@@ -1,9 +1,24 @@
 article.tickets {
-  margin: 0px 35px 0 0;
-  width: 25%;
-  background: #cecece;
-  float: left;
-  padding: 15px 20px 20px; 
+  padding: 20px;
+}
+
+article.tickets table {
+  background: #f6f6f6;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+article.tickets table th {
+  padding: 2px 5px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+article.tickets table th span.property {
+  color: gray;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 article.tickets h2 {
@@ -18,17 +33,76 @@ article.tickets ul li {
   cursor: pointer;
 }
 
-article.tickets ul li:hover, article.tickets ul li.active {
-  background: #ffffff;
+article.tickets ul li:hover, article.tickets tr.active {
+  background: #2080ad;
+  color: white;
+}
+
+header.tickets-header {
+  padding: 20px;
+}
+
+header.tickets-header h3 {
+  width: 75%;
+}
+
+header.tickets-header a.new-ticket {
+  float: right;
 }
 
 article.ticket {
-  margin: 10px;
-  width: 60%;
-  float: left;
+  margin: 0 20px 20px;
+  padding: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-header.ticket-header {
+article.ticket .ticket-header h3 {
+  margin-top: 10px; 
+}
+
+article.ticket .ticket-header .actions {
   float: right;
-  margin: 10px;
+}
+
+article.ticket .ticket-header .ticket-id {
+  display: inline-block;
+  position: relative;
+  left: -24px;
+  width: 94px;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  background-color: #2080ad;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+article.ticket .ticket-header .ticket-id span {
+  position: relative;
+  left: 2px;
+  z-index: 1;
+}
+
+article.ticket .ticket-header .ticket-id:after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  right: -41px;
+  width: 15px;
+  height: 15px;
+  box-shadow: 6px 0 3px -3px rgba(0, 0, 0, 0.15);
+  background-color: inherit;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  transform: rotate(45deg);
+}
+
+article.ticket .ticket-details {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 15px
 }

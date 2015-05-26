@@ -1,17 +1,31 @@
-<article class="tickets">
-  <ul>
-    {{#each ticket in model}}
-      {{#link-to 'ticket' ticket tagName="li"}}
-        {{ticket.summary}}
-      {{/link-to}}
-    {{/each}}
-  </ul>
-</article>
-
-<header class="ticket-header">
+<header class="tickets-header">
+  <h3>All Tickets</h3>
   {{#link-to "tickets.new" class="sui-bttn sui-bttn-primary new-ticket"}}
     New Ticket
   {{/link-to}}
 </header>  
+
+<article class="tickets">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th><span class="property">ID</span></th>
+        <th><span class="property">Summary</span></th>
+        <th><span class="property">Creator</span></th>
+        <th><span class="property">Created At</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each ticket in model}}
+        {{#link-to 'ticket' ticket tagName="tr"}}
+          <td>{{ticket.id}}</td>
+          <td>{{ticket.summary}}</td>
+          <td>{{ticket.creator}}</td>
+          <td>{{ticket.createdAt}}</td>
+        {{/link-to}}
+      {{/each}}
+    </tbody>
+  </table>
+</article>
 
 {{outlet}}
