@@ -9,7 +9,7 @@ module.exports = function(app) {
             "description": "Tempore nesciunt consequatur iusto eos.",
             "summary": "Aut consequuntur sunt repellendus necessitatibus voluptatem.",
             "status" : "closed",
-            "created_at": "2015-05-10T11:18:33-05:00"
+            "created_at": "2015-05-10T11:18:33Z"
         },
         {
             "id": 2,

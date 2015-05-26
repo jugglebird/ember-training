@@ -5,7 +5,7 @@ var Ticket = DS.Model.extend({
   description: DS.attr('string'),
   status: DS.attr('string', {defaultValue: "open"}),
   creator: DS.attr('string'),
-  createdAt: DS.attr('date')
+  created_at: DS.attr('date')
 });
 
 Ticket.reopenClass({

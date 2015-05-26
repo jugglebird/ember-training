@@ -4,7 +4,6 @@ export default Ember.Controller.extend({
   isEditing: false,
 
   prettyId: function() {
-    console.log(this.get("model.id"));
     return "#" + this.get("model.id");
   }.property("model.prettyId"),
 

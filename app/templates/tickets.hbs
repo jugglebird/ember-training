@@ -21,7 +21,7 @@
           <td>{{ticket.id}}</td>
           <td>{{ticket.summary}}</td>
           <td>{{ticket.creator}}</td>
-          <td>{{ticket.createdAt}}</td>
+          <td>{{moment ticket.created_at "MM/DD/YYYY"}}</td>
         {{/link-to}}
       {{/each}}
     </tbody>
