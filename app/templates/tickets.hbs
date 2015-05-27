@@ -2,15 +2,15 @@
   <header class="tickets-header">
     <div class="ticket-filters">
       <div class="ticket-filter" {{action 'filterBy' 'all'}}>
-        <h3 class="ticket-count">{{allTicketsCount}}</h3>
+        <h3 class="ticket-count">{{meta.all}}</h3>
         <p class="ticket-category">All</p>
       </div>
       <div class="ticket-filter" {{action 'filterBy' 'open'}}>
-        <h3 class="ticket-count">32</h3>
+        <h3 class="ticket-count">{{meta.open}}</h3>
         <p class="ticket-category">Open</p>
       </div>
       <div class="ticket-filter" {{action 'filterBy' 'closed'}}>
-        <h3 class="ticket-count">13</h3>
+        <h3 class="ticket-count">{{meta.closed}}</h3>
         <p class="ticket-category">Closed</p>
       </div>
     </div>

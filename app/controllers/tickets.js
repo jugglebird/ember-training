@@ -5,7 +5,9 @@ export default Ember.ArrayController.extend({
   sortProperties: ["created_at"],
   sortAscending: false,
 
-  allTicketsCount: 20,
+  meta: function() {
+    return this.get('store').metadataFor('ticket');
+  }.property('store'),
 
   filteredTickets: function() {
     var filter = this.get('filter'),
