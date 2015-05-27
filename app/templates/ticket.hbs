@@ -7,16 +7,13 @@
         <button class="sui-bttn">Open</button>
         {{link-to 'Edit' 'ticket.edit' classNames='edit sui-bttn'}}
       </div>
-      <span class="ticket-id">{{prettyId}}</span>
-      <div class="byline-area">
-        <p class="meta byline">
-          created on {{moment model.created_at "LLLL"}} 
-        </p>
-      </div>
+      <img class="avatar-image-large" src={{model.avatar_url}} />
       <h3>
         {{model.summary}}
       </h3>
-      <p><strong>Created by</strong>&nbsp;{{model.creator}}</p>
+      <div class="byline">
+        {{model.creator}} | created on {{moment model.created_at "llll"}} 
+      </div>
     </div>
     <div class="ticket-details">
       <p>{{model.description}}</p>

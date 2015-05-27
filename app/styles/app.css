@@ -83,8 +83,40 @@
   margin-bottom: 20px;
 }
 
+.avatar-image-large {
+  float: left;
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  background: #e2e2e2;
+  margin-right: 15px;
+}
+
 .ticket {
   float: left;
   padding: 20px;
-  width: 625px;
+  width: 825px;
+}
+
+.ticket .ticket-header {
+  height: 120px;
+}
+
+.ticket .ticket-header h3 {
+  font-size: 24px;
+}
+
+.ticket .ticket-header .byline {
+  color: #999999; 
+}
+
+.ticket .ticket-header .actions {
+  float: right;
+}
+
+.ticket .ticket-details {
+  float: left;
+  font-size: 16px;
 }
