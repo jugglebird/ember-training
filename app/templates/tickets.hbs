@@ -15,29 +15,7 @@
       </div>
     </div>
   </header>  
-  <ul>
-    {{#each ticket in filteredTickets}}
-      <li>
-        <div class="ticket-item-header">
-          <img class="avatar-image" src="{{ticket.avatar_url}}" />
-          {{#if ticket.isClosed}}
-            <p class="ticket-item-status">{{ticket.status}}</p>
-          {{/if}}
-          <div class="ticket-item-details">
-            <h4 class="ticket-item-summary">
-              {{#link-to 'ticket' ticket}}
-                {{ticket.summary}}
-              {{/link-to}}
-            </h4>
-            <p class="ticket-created-by">
-              {{ticket.creator}}
-              <span class="ticket-created-at">{{ago ticket.created_at}}</span>
-            </p>
-          </div>
-        </div>
-      </li>
-    {{/each}}
-  </ul>
+  {{ticket-list tickets=filteredTickets}}
 </article>
 
 {{outlet}}

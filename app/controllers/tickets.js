@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  filter: 'all',
+  filter: "all",
   sortProperties: ["created_at"],
   sortAscending: false,
 
