@@ -1,5 +1,11 @@
 <header class="tickets-header">
-  <h3>All Tickets</h3>
+  <div class="tickets-filter">
+    {{#sui-dropdown triggerText="Tickets" class="ticket-filter"}}
+      {{sui-dropdown-item value="all" text="All"}}
+      {{sui-dropdown-item value="open" text="Open"}}
+      {{sui-dropdown-item value="closed" text="Closed"}}
+    {{/sui-dropdown}}
+  </div>
   {{#link-to "tickets.new" class="sui-bttn sui-bttn-primary new-ticket"}}
     New Ticket
   {{/link-to}}
