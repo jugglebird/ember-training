@@ -1,37 +1,43 @@
-<header class="tickets-header">
-  <div class="tickets-filter">
-    {{#sui-dropdown triggerText="Tickets" class="ticket-filter"}}
-      {{sui-dropdown-item value="all" text="All"}}
-      {{sui-dropdown-item value="open" text="Open"}}
-      {{sui-dropdown-item value="closed" text="Closed"}}
-    {{/sui-dropdown}}
-  </div>
-  {{#link-to "tickets.new" class="sui-bttn sui-bttn-primary new-ticket"}}
-    New Ticket
-  {{/link-to}}
-</header>  
-
-<article class="tickets">
-  <table class="table table-condensed">
-    <thead>
-      <tr>
-        <th><span class="property">ID</span></th>
-        <th><span class="property">Summary</span></th>
-        <th><span class="property">Creator</span></th>
-        <th><span class="property">Created At</span></th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each ticket in model}}
-        {{#link-to 'ticket' ticket tagName="tr"}}
-          <td>{{ticket.id}}</td>
-          <td>{{ticket.summary}}</td>
-          <td>{{ticket.creator}}</td>
-          <td>{{moment ticket.created_at "MM/DD/YYYY"}}</td>
-        {{/link-to}}
-      {{/each}}
-    </tbody>
-  </table>
+<article class="tickets col-md-3">
+  <header class="tickets-header">
+    <div class="ticket-filters">
+      <div class="ticket-filter" {{action 'filterBy' 'all'}}>
+        <h3 class="ticket-count">{{allTicketsCount}}</h3>
+        <p class="ticket-category">All</p>
+      </div>
+      <div class="ticket-filter" {{action 'filterBy' 'open'}}>
+        <h3 class="ticket-count">32</h3>
+        <p class="ticket-category">Open</p>
+      </div>
+      <div class="ticket-filter" {{action 'filterBy' 'closed'}}>
+        <h3 class="ticket-count">13</h3>
+        <p class="ticket-category">Closed</p>
+      </div>
+    </div>
+  </header>  
+  <ul>
+    {{#each ticket in filteredTickets}}
+      <li>
+        <div class="ticket-item-header">
+          <img class="avatar-image" src="{{ticket.avatar_url}}" />
+          {{#if ticket.isClosed}}
+            <p class="ticket-item-status">{{ticket.status}}</p>
+          {{/if}}
+          <div class="ticket-item-details">
+            <h4 class="ticket-item-summary">
+              {{#link-to 'ticket' ticket}}
+                {{ticket.summary}}
+              {{/link-to}}
+            </h4>
+            <p class="ticket-created-by">
+              {{ticket.creator}}
+              <span class="ticket-created-at">{{ago ticket.created_at}}</span>
+            </p>
+          </div>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
 </article>
 
 {{outlet}}
