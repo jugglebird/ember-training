@@ -34,7 +34,7 @@
     "ember-disable-proxy-controllers": "^0.7.0",
     "ember-export-application-global": "^1.0.2",
     "ember-moment": "1.1.1",
-    "ember-sui-toolkit": "git+ssh://git@gitlab.spice.spiceworks.com:components/ember-sui-toolkit.git#v2.6.2",
+    "ember-sui-toolkit": "git+https://git@gitlab.spice.spiceworks.com/components/ember-sui-toolkit.git#v2.7.0",
     "express": "^4.12.4",
     "glob": "^4.5.3",
     "morgan": "^1.5.3"
