@@ -19,6 +19,17 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    // 'default-src': "'none'",
+    // 'script-src': "'self' https://cdn.mxpnl.com", // Allow scripts from https://cdn.mxpnl.com
+    'font-src': "'self' http://themes.googleusercontent.com",
+    // 'connect-src': "'self' http://swapi.co"
+    'img-src': "'self' http://robohash.org/",
+    // 'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+    // 'media-src': "'self'"
+  }
+
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
