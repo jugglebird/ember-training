@@ -4,7 +4,11 @@
   <article class="ticket">
     <div class="ticket-header">
       <div class="actions">
-        <button class="sui-bttn">Open</button>
+        {{#if isClosed}}
+          <button class="sui-bttn" {{action "toggleStatus"}}>Reopen</button>
+        {{else}}
+          <button class="sui-bttn sui-bttn-primary" {{action "toggleStatus"}}>Close</button>
+        {{/if}}
         {{link-to 'Edit' 'ticket.edit' classNames='edit sui-bttn'}}
       </div>
       <img class="avatar-image-large" src={{model.avatar_url}} />
