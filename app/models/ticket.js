@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
 var Ticket = DS.Model.extend({
@@ -8,9 +9,9 @@ var Ticket = DS.Model.extend({
   avatar_url: DS.attr('string'),
   created_at: DS.attr('date'),
 
-  isClosed: function() {
+  isClosed: Ember.computed("status", function() {
     return this.get("status") === "closed";
-  }.property("status")
+  })
 });
 
 Ticket.reopenClass({

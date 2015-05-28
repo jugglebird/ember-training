@@ -3,13 +3,13 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   isEditing: false,
 
-  prettyId: function() {
+  prettyId: Ember.computed("model.prettyId", function() {
     return "#" + this.get("model.id");
-  }.property("model.prettyId"),
+  }),
 
-  isClosed: function() {
+  isClosed: Ember.computed("model.isClosed", function() {
     return this.get("model.isClosed");
-  }.property("model.isClosed"),
+  }),
 
   actions: {
     saveChanges: function() {

@@ -5,11 +5,11 @@ export default Ember.ArrayController.extend({
   sortProperties: ["created_at"],
   sortAscending: false,
 
-  meta: function() {
+  meta: Ember.computed('store', function() {
     return this.get('store').metadataFor('ticket');
-  }.property('store'),
+  }),
 
-  filteredTickets: function() {
+  filteredTickets: Ember.computed('filter', 'arrangedContent', function() {
     var filter = this.get('filter'),
         tickets = this.get('arrangedContent');
 
@@ -20,7 +20,7 @@ export default Ember.ArrayController.extend({
     } else {
       return tickets;
     }
-  }.property('filter', 'arrangedContent'),
+  }),
 
   actions: {
     filterBy: function(filter) {
